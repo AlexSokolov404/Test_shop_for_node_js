@@ -1,0 +1,17 @@
+<div class="conteiner-fluid">
+    {{#if datasUser.length}}
+    {{#each datasUser}}
+    <div class="card mb-3" style="padding-top: 50px;">
+        <img src="http://magspace.ru/uploads/2017_/02/27/11-27beletskYairglow_pano.jpg" class="card-img-top" alt="logo"
+            style="height: 300px;">
+            <h3 class="card-header">{{nickname}}</h3>
+        <div class="card-body">
+            <h5 class="card-title">Ваша почта: {{email}}</h5>
+            <h5 class="card-title">Ваш пароль: {{password}}</h5>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <h3>Пользователь не зарегистрирован!</h3>
+    {{/if}}
+</div>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: sss;
+    src: url("/fonts/Excelorate-Font.otf");
+}
+
+@font-face {
+    font-family: qqq;
+    src: url("/fonts/Miratrix-Normal.otf");
+}
+
+@font-face {
+    font-family: ddd;
+    src: url("/fonts/mr_hanginglettersg.otf");
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.815);
+}
+
+hr {
+    margin-right: auto;
+    margin-left: auto;
+    width: 97%;
+}
+
+header .logo {
+    margin-left: 30px;
+    display: flex;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.logo span {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    font-family: ddd;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    animation: flip 8s infinite;
+    animation-delay: calc(0.2s * var(--i));
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg);
+    }
+}
+
+.active{
+    color: rgb(226, 43, 156);
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+
+nav {
+    margin-right: 30px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    font-family: qqq;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+li {
+    position: relative;
+}
+
+li:focus-within>.submenu,
+li:hover>.submenu {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+}
+
+.menu>li:not(:last-child) {
+    margin-right: 40px;
+}
+
+li:hover>a,
+a:hover {
+    color: rgb(226, 43, 156);
+}
+
+/* li:hover > img{
+    background-color: rgb(226, 43, 156);
+  } */
+.submenu {
+    flex-direction: column;
+    position: absolute;
+    padding-top: 20px;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.icon {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    margin: 70px 25px 0 0;
+}
+
+.icon img {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    transition: 1s;
+}
+
+.icon img:hover {
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    transform: scale(1.2);
+}
+
+li:hover img {
+    /* height: 4em;
+    width: 4em; */
+    -webkit-filter: hue-rotate(320deg);
+    filter: hue-rotate(320deg);
+    color: aqua;
+}

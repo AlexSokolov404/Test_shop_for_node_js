@@ -1,0 +1,83 @@
+<div class="container-sidebar">
+    <div class="sideBarPage">
+        <div class="sidebar">
+            <div style="background: linear-gradient(110.87deg, rgb(35, 36, 43) 45%, rgb(225, 109, 47) 145%);">
+                <h1>Shadow of the Tomb Raider</h1>
+                <p>Платформы: Windows, Xbox One, PlayStation 4, Linux, MacOS, Stadia</p>
+            </div>
+            <div style="background: linear-gradient(215.32deg, rgb(39, 64, 244) 5%, rgb(119, 0, 128) 100%);">
+                <h1>Forza Horizon 5</h1>
+                <p>Платформы: Windows, Xbox Series X/S, Xbox One</p>
+            </div>
+            <div style="background: linear-gradient(110.87deg, rgb(9, 22, 142) 45%, rgb(192, 157, 187) 100%);">
+                <h1>Need for Speed Heat</h1>
+                <p>Платформы: Windows, Xbox One, PlayStation 4</p>
+            </div>
+            <div style="background: linear-gradient(110.87deg, rgb(120, 121, 111) 45%, rgb(80, 79, 80) 100%);">
+                <h1>Crysis 3</h1>
+                <p>Платформы: Windows, Xbox 360, PlayStation 3, Nintendo Switch, Xbox One</p>
+            </div>
+        </div>
+        <div class="main-slide">
+            <div style="
+            background-image: url('../images/slider_img/crysis_14-wallpaper-1920x10801.jpg');
+          "></div>
+            <div style="
+            background-image: url('../images/slider_img/wallpaperflare.com_wallpaper11.jpg');
+          "></div>
+            <div style="
+            background-image: url('../images/slider_img/wallpaperflare.com_wallpaper2.jpg');
+          "></div>
+            <div style="
+            background-image: url('../images/slider_img/wallpaperflare.com_wallpaper51.jpg');
+          "></div>
+        </div>
+        <div class="controls">
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+    
+</div>
+<div class="page2">
+    <img src="/images/7349088_3602762.jpg" alt="">
+</div>
+<script>
+    const container = document.querySelector('.container-sidebar')
+    const sideBar = document.querySelector('.sidebar')
+    const mainSlide = document.querySelector('.main-slide')
+    const downBtn = document.querySelector('.down-button')
+    const upBtn = document.querySelector('.up-button')
+
+    const slidesCount = mainSlide.querySelectorAll('div').length
+
+    let activeSlideIndex = 0
+
+    const height = container.clientHeight
+
+    sideBar.style.top = `-${(slidesCount - 1) * 100}vh`
+
+    downBtn.addEventListener('click', () => onChange('down'))
+    upBtn.addEventListener('click', () => onChange('up'))
+
+    function onChange(direction) {
+        if (direction === 'up') {
+            activeSlideIndex++
+            if (activeSlideIndex === slidesCount) {
+                activeSlideIndex = 0
+            }
+        } else if (direction === 'down') {
+            activeSlideIndex--
+            if (activeSlideIndex < 0) {
+                activeSlideIndex = slidesCount - 1
+            }
+        }
+        mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`
+        sideBar.style.transform = `translateY(${activeSlideIndex * height}px)`
+        console.log(activeSlideIndex)
+    }
+</script>

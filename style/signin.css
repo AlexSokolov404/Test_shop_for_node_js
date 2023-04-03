@@ -1,0 +1,165 @@
+@font-face {
+    font-family: ddd;
+    src: url("/fonts/mr_hanginglettersg.otf");
+}
+
+@font-face {
+    font-family: sss;
+    src: url("/fonts/unineueheavy-italic.ttf");
+}
+
+@font-face {
+    font-family: qqq;
+    src: url("/fonts/Miratrix-Normal.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/images/9694001_4249454.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    /* align-items: flex-end; */
+    height: 50px;
+    align-items: center;
+    color: white;
+    font-family: qqq;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+form {
+    color: white;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 0px 6px 1px rgba(255, 255, 255, 0.6);
+    background-size: cover;
+    backdrop-filter: blur(15px);
+}
+
+label {
+    font-family: sss;
+    text-shadow: 2px 2px 6px black;
+    display: flex;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+}
+
+.form input {
+    width: 200px;
+    padding: 10px 0 10px 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.header {
+    margin: 10px 0;
+    font-size: 50px;
+    text-shadow: 2px 2px 6px black;
+    font-family: ddd;
+}
+
+button {
+    color: white;
+    font-size: 20px;
+    font-family: sss;
+    text-shadow: 2px 2px 6px black;
+    width: 150px;
+    height: 35px;
+    border: none;
+    background: rgb(202, 54, 216);
+
+}
+
+
+button {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgb(234, 0, 255);
+    text-decoration: none;
+}
+
+form a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.donthave {
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
+
+.line {
+    width: 80px;
+    height: 1px;
+    border: 1px solid white;
+}
+
+.singInWith {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.singInWith p {
+    margin: 0 5px 0 5px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.icon {
+    margin: 20px;
+}
+
+.icon img {
+    width: 40px;
+    transition: 1s;
+}
+
+.icon img:hover {
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    transform: scale(1.2);
+}
+
+.remember {
+    margin-top: 20px;
+    display: flex;
+}
+
+.remember p {
+
+    text-shadow: 2px 2px 2px black;
+}
+
+.home img {
+    margin-top: 60px;
+    width: 30px;
+}
